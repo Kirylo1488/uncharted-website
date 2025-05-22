@@ -1,57 +1,220 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-<title>UNCHARTED</title>
-    <body>
-<img src="https://www.pngarts.com/files/3/Uncharted-Logo-PNG-Image-Background.png" height="100px" width="285px">
-<button><a href="https://uk.wikipedia.org/wiki/Uncharted">ГРАТИ</a></button>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCHARTED | Офіційний фан-сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #81100C;
+            --secondary: #D4A017;
+            --dark: #1A1A1A;
+            --light: #F5F5F5;
+            --accent: #3A6EA5;
+        }
 
-<main>
+        body {
+            font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: var(--primary);
+            padding: 20px;
+            color: var(--light);
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-  <center>
-  <h1 class="spongebob">UNCHARTED</h1>
-  </center>
-  <h3 class="sigma">Uncharted — це популярна серія відеоігор, розроблена компанією Naughty Dog, що поєднує в собі елементи екшену, пригод та платформера. Гравці слідують за пригодами Нейтана Дрейка, шукаючи стародавні артефакти та розкриваючи таємниці історії.</h3>
-  
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
 
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
 
+        h2 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 0.5rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
 
+        h3 {
+            font-size: 1.2rem;
+            color: var(--light);
+            margin: 0.5rem 0;
+        }
 
+        /* Links & Buttons */
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
 
-</main>
+        a:hover {
+            color: var(--light);
+            text-decoration: underline;
+        }
 
+        button {
+            display: block;
+            margin: 20px auto;
+            border: 3px solid var(--dark);
+            background-color: var(--secondary);
+            color: var(--dark);
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
+        button:hover {
+            background-color: var(--light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
 
-<header>
-  <nav>
-  </nav>
-</header>
+        /* Images */
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
 
+        img:hover {
+            transform: scale(1.03);
+        }
 
+        /* Layout */
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
 
+        main {
+            padding: 20px 0;
+            margin: 30px 0;
+            border-top: 2px solid var(--secondary);
+            border-bottom: 2px solid var(--secondary);
+        }
 
-<footer>
-  <center>
-   <h1 class="artur">ГОЛОВНІ ГЕРОІ</h1>
-   </center> 
+        footer {
+            padding: 20px 0;
+        }
 
-<h2>НЕЙТАН</h2>
-<img src="https://upload.wikimedia.org/wikipedia/ru/7/73/Nathan_Drake.png" width="100px" height="100px">
+        .character {
+            background-color: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-<h3>Головний герой, дослідник і шукач скарбів</h3>
-<h2>ЕЛІ</h2>
-<img src="https://upload.wikimedia.org/wikipedia/uk/9/96/Ellie_in_The_Last_of_Us_Part_II.png" width="100px" height="100px">
+        .character-info {
+            flex: 1;
+        }
 
-<h3>Дружина Дрейка, також дослідниця</h3>
-<h2>САЛЛІ</h2>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEQ7n_OdOmIAHZMedWUxWJgtVayhvfG3XTA&s" width="150px" height="100px">
-<h3>Довірений друг та партнер Дрейка</h3>
-<h2>ЧЛОЯ ФРЕЙЗЕР</h2>
-<img src="https://img.goodfon.ru/wallpaper/big/b/13/uncharted-lost-legacy-khloia-freizer-seryi-fon.webp" width="150px" height="100px">
-<h3>Сильна та незалежна героїня, що з’являється в деяких частинах серії</h3>
-</footer>
+        .character-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
 
+        .logo {
+            width: 285px;
+            height: auto;
+            margin-bottom: 20px;
+        }
 
-    </body>
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .character {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.pngarts.com/files/3/Uncharted-Logo-PNG-Image-Background.png" alt="Uncharted Logo" class="logo">
+        <button><a href="https://uk.wikipedia.org/wiki/Uncharted">ГРАТИ</a></button>
+    </header>
+
+    <main>
+        <h1>UNCHARTED</h1>
+        <h3>Uncharted — це популярна серія відеоігор, розроблена компанією Naughty Dog, що поєднує в собі елементи екшену, пригод та платформера. Гравці слідують за пригодами Нейтана Дрейка, шукаючи стародавні артефакти та розкриваючи таємниці історії.</h3>
+    </main>
+
+    <footer>
+        <h1>ГОЛОВНІ ГЕРОЇ</h1>
+        
+        <div class="character">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/7/73/Nathan_Drake.png" alt="Нейтан Дрейк" class="character-img">
+            <div class="character-info">
+                <h2>НЕЙТАН ДРЕЙК</h2>
+                <h3>Головний герой серії, дослідник і шукач скарбів. Майстерний у виживанні, боях та розгадуванні загадок. Його чарівність та почуття гумору роблять його унікальним героєм.</h3>
+            </div>
+        </div>
+        
+        <div class="character">
+            <img src="https://static.wikia.nocookie.net/uncharted/images/2/2e/Elenauncharted4.jpg" alt="Елена Фішер" class="character-img">
+            <div class="character-info">
+                <h2>ЕЛЕНА ФІШЕР</h2>
+                <h3>Дружина Дрейка, журналістка та дослідниця. Сильна, незалежна та розумна, вона часто рятує Дрейка з неприємностей, поєднуючи професійні навички з особистою мужністю.</h3>
+            </div>
+        </div>
+        
+        <div class="character">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEQ7n_OdOmIAHZMedWUxWJgtVayhvfG3XTA&s" alt="Віктор Салліван" class="character-img">
+            <div class="character-info">
+                <h2>ВІКТОР "САЛЛІ" САЛЛІВАН</h2>
+                <h3>Довірений друг та наставник Дрейка. Досвідчений шукач пригод з багаторічним досвідом. Його мудрість та зв'язки часто допомагають у найскладніших ситуаціях.</h3>
+            </div>
+        </div>
+        
+        <div class="character">
+            <img src="https://img.goodfon.ru/wallpaper/big/b/13/uncharted-lost-legacy-khloia-freizer-seryi-fon.webp" alt="Хлоя Фрейзер" class="character-img">
+            <div class="character-info">
+                <h2>ХЛОЯ ФРЕЙЗЕР</h2>
+                <h3>Сильна та незалежна героїня, що з'являється в деяких частинах серії. Конкурентоспроможна шукачка скарбів з Австралії, яка поєднує інтелект з фізичною силою.</h3>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
